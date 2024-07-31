@@ -1,0 +1,8 @@
+This formula is used to create a count of unique values within a selected value, for example:
+- unique items for sale within a specific store location
+- Unique employee names within a department
+The formula creates a table to do this and when there is no return in the table it produces is empty
+then the result is #CALC! which is counted. The NOT(ISERR removes this issue
+
+
+=SUMPRODUCT(--NOT(ISERR(UNIQUE(FILTER('Candidate Row Data'!$D:$D,'Candidate Row Data'!$A:$A=BAU!$A2)))))
